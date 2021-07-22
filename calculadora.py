@@ -4,8 +4,6 @@ root = Tk()
 
 root.title("Calculadora")
 
-titulo = Label(text = "Calculadora", font=("Helvetica", 16))
-titulo.pack()
 
 display = Frame(root)
 display.pack()
@@ -49,6 +47,7 @@ def borrar():
 
 top = Frame(root)
 top.pack()
+
 
 izq = Frame(top)
 izq.pack(side = LEFT)
@@ -141,20 +140,24 @@ def igual():
     
     finNum = True
 
-pady = 20
+pady = 0
 padx = 10
 
-mas = Button(der, text = "+", font=("Helvetica", 16), command = suma)
-mas.pack(pady = pady, padx = padx)
+mas = Button(der, text = "+", font=("Helvetica", 16), command = suma, width = 3, height=2)
+#mas.pack(pady = pady, padx = padx)
+mas.grid(row = 0, column = 0)
 
-menos = Button(der, text = "-", font=("Helvetica", 16), command = resta)
-menos.pack(pady = pady, padx = padx)
+menos = Button(der, text = "-", font=("Helvetica", 16), command = resta, width = 3, height=2)
+#menos.pack(pady = pady, padx = padx)
+menos.grid(row = 0, column = 1)
 
-por = Button(der, text = "*", font=("Helvetica", 16), command = multiplicacion)
-por.pack(pady = pady, padx = padx)
+por = Button(der, text = "*", font=("Helvetica", 16), command = multiplicacion, width = 3, height=2)
+#por.pack(pady = pady, padx = padx)
+por.grid(row = 1, column = 0)
 
-sobre = Button(der, text = "/", font=("Helvetica", 16), command = division)
-sobre.pack(pady = pady, padx = padx)
+sobre = Button(der, text = "/", font=("Helvetica", 16), command = division, width = 3, height=2)
+#sobre.pack(pady = pady, padx = padx)
+sobre.grid(row = 1, column = 1)
 
 bot = Frame(root)
 bot.pack()
